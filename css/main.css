@@ -114,8 +114,70 @@ img {
 .title {
   font-size: 48px;
   font-weight: 700;
+  line-height: normal;
 }
 
 button {
   background-color: transparent;
+  border-radius: 30px;
+  background: #9c0332;
+  width: 234px;
+  height: 48px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.header {
+  background: url(../img/header/bg-header.jpg) no-repeat;
+  background-position: center 20%;
+  background-size: cover;
+  height: 1024px;
+  padding-top: 217px;
+}
+.header__title {
+  font-size: 64px;
+  max-width: 700px;
+}
+.header__text {
+  margin: 32px 0 44px;
+  max-width: 480px;
+}
+.header__text span {
+  font-weight: 700;
+}
+
+.footer {
+  padding: 32.5px 0;
+  border-top: 1px solid rgba(184, 212, 255, 0.2);
+}
+
+.footer__text {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.games {
+  padding: 128px 0;
+}
+.games__title--none {
+  display: none;
+}
+.games__box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32.5px 32px;
+}
+
+.game {
+  position: relative;
+}
+.game__subtitle {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 132%;
 }

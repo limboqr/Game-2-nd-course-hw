@@ -29,8 +29,16 @@ img {
 .title {
    font-size: 48px;
    font-weight: 700;
+   line-height: normal;
 }
 
 button {
    background-color: transparent;
+   border-radius: 30px;
+   background: #9c0332;
+   width: 234px;
+   height: 48px;
+
+   font-weight: 400;
+   line-height: normal;
 }
