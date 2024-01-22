@@ -1,0 +1,31 @@
+// * Games
+
+.games {
+   padding: 128px 0;
+
+   &__title--none {
+      display: none;
+   }
+
+   &__box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32.5px 32px;
+   }
+}
+
+// * Game
+
+.game {
+   position: relative;
+
+   &__subtitle {
+      position: absolute;
+      bottom: 32px;
+      left: 32px;
+
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 132%;
+   }
+}

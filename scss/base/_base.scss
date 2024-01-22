@@ -1,0 +1,44 @@
+// * Fonts
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
+
+// * Basic
+
+* {
+   color: #fff;
+   font-family: "Montserrat", sans-serif;
+   font-size: 18px;
+   font-weight: 300;
+   line-height: 178%;
+}
+
+.container {
+   max-width: 1230px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+body {
+   background: #000915;
+}
+
+img {
+   max-width: 100%;
+}
+
+.title {
+   font-size: 48px;
+   font-weight: 700;
+   line-height: normal;
+}
+
+button {
+   background-color: transparent;
+   border-radius: 30px;
+   background: #9c0332;
+   width: 234px;
+   height: 48px;
+
+   font-weight: 400;
+   line-height: normal;
+}
