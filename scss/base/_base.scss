@@ -32,7 +32,7 @@ img {
    line-height: normal;
 }
 
-button {
+.button {
    background-color: transparent;
    border-radius: 30px;
    background: #9c0332;
@@ -41,4 +41,29 @@ button {
 
    font-weight: 400;
    line-height: normal;
+   transition: all .3s ease-in-out;
+
+   &:hover {
+      background: #EB443F;
+   }
+}
+
+// * Scrollbar
+
+::-webkit-scrollbar {
+   width: 4px;
+   height: 6px;
+}
+
+::-webkit-scrollbar-track {
+   -webkit-box-shadow: -5px -5px 5px 0px rgba(0, 0, 0, 0.5) inset;
+   background-color: #9c0332;
+}
+
+::-webkit-scrollbar-thumb {
+   border-bottom-left-radius: 3px;
+   border-bottom-right-radius: 3px;
+   border-top-left-radius: 3px;
+   border-top-right-radius: 3px;
+   background: linear-gradient(180deg, #44d3ff00, #006384,#18214300);
 }
