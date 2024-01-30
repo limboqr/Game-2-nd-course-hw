@@ -35,7 +35,6 @@ let x = 9 % 2
 console.log(x)
 
 // * Task 7
-
 let num = 1
 num += 5
 num -= 3
@@ -57,13 +56,13 @@ let user = {
 }
 
 // * Task 9.1
-user.cityOfResidence = "Novosibirsk"
+user["city of residence"] = "Novosibirsk"
 
 // * Task 9.2
 user.age = Number(prompt())
 
 // * Task 9.3
-delete user.cityOfResidence
+delete user["city of residence"]
 
 //  * Task 9.4
 let info = prompt("Какую информацию хотите узнать о пользователе?")
