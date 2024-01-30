@@ -9,6 +9,7 @@
 
    &__box {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 32.5px 32px;
    }
@@ -18,6 +19,38 @@
 
 .game {
    position: relative;
+   border-radius: 16px;
+   transition: box-shadow 0.3s ease-in-out;
+
+   &:hover {
+      border-radius: 16px;
+      box-shadow: 0 0 0 3px #44d2ff;
+      transition: box-shadow 0.3s initial ease-in-out;
+
+      animation: neon-game 1.2s 1 linear backwards;
+
+      @keyframes neon-game {
+         0% {
+            box-shadow: 0 0 0 0;
+         }
+
+         12% {
+            box-shadow: 0 0 0 3px #89e4ff;
+         }
+
+         50% {
+            box-shadow: 0 0 0 3px #ffffff;
+         }
+
+         80% {
+            box-shadow: 0 0 0 3px #89e4ff;
+         }
+
+         100% {
+            box-shadow: 0 0 0 3px #44d2ff;
+         }
+      }
+   }
 
    &__subtitle {
       position: absolute;
