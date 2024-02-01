@@ -3,6 +3,25 @@
       height: 735px;
       padding-top: 117px;
    }
+
+   .seasons {
+      padding: 51px 0 85px;
+
+      &__content {
+         flex-direction: column;
+      }
+
+      &__box {
+         text-align: center;
+         align-items: center;
+      }
+
+      &__text {
+         max-width: 580px;
+         font-size: 14px;
+         line-height: 157%;
+      }
+   }
 }
 
 @media (max-width: 767px) {
@@ -42,6 +61,10 @@
          font-size: 14px;
          margin: 32.5px 0;
          animation: header-text 0.8s ease-in-out backwards;
+
+         & span {
+            font-size: 14px;
+         }
 
          @keyframes header-text {
             0% {
