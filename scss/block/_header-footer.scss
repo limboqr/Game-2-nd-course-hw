@@ -104,7 +104,8 @@
 
       &:hover {
          animation:
-         header-button, header-button-heart 3s infinite ease-in 1s backwards;
+            header-button,
+            header-button-heart 3s infinite ease-in 1s backwards;
 
          @keyframes header-button-heart {
             0% {
