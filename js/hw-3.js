@@ -5,9 +5,9 @@ let password = 'пароль'
 let userPassword = prompt(`Введите ${password}`)
 
 if (userPassword === password) {
-   console.log("Пароль введен верно")
+   alert("Пароль введен верно")
 } else {
-   console.log("Пароль введен неправильно")
+   alert("Пароль введен неправильно")
 }
 
 
@@ -66,8 +66,8 @@ let b = '3'
 // ? alert(a + b)
 
 console.log(Number(a) + Number(b))
-console.log((+a) + (+b))
-console.log(-(-a + -b))
+// console.log((+a) + (+b))
+// console.log(-(-a + -b))
 
 
 // * Task 5
@@ -150,8 +150,6 @@ switch (monthNumber) {
 
 // * Task 7
 let numUser = Number(prompt('Пожалуйста, введите любое число'))
-
-numUser = Number(numUser)
 
 if (numUser % 2) {
    console.log('Число нечетное')
