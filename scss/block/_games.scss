@@ -1,5 +1,4 @@
 // * Games
-
 .games {
    padding: 128px 0;
 
@@ -16,11 +15,13 @@
 }
 
 // * Game
-
 .game {
    position: relative;
-   border-radius: 16px;
    transition: box-shadow 0.3s ease-in-out;
+
+   & img {
+      border-radius: 16px;
+   }
 
    &:hover {
       border-radius: 16px;
