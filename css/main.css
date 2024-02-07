@@ -122,7 +122,6 @@ button {
 }
 
 .button {
-  background-color: transparent;
   border-radius: 30px;
   background: #9c0332;
   width: 234px;
@@ -132,7 +131,7 @@ button {
   transition: all 0.3s ease-in-out;
 }
 .button:hover {
-  background: #EB443F;
+  background: #eb443f;
 }
 
 ::-webkit-scrollbar {
@@ -290,6 +289,7 @@ button {
 .game {
   position: relative;
   transition: box-shadow 0.3s ease-in-out;
+  border-radius: 16px;
 }
 .game img {
   border-radius: 16px;
@@ -340,11 +340,6 @@ button {
   flex-direction: column;
   gap: 32px 0;
 }
-.seasons__text {
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 178%;
-}
 .seasons__button p {
   font-size: 18px;
   font-weight: 400;
@@ -352,6 +347,56 @@ button {
 }
 .seasons__button p:hover {
   animation: seasons-button 5s ease 2s infinite normal backwards;
+}
+@keyframes seasons-button {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  45% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  55% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.words {
+  padding: 239px 0;
+}
+.words__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px 135px;
+}
+.words__box {
+  display: flex;
+  flex-direction: column;
+  gap: 32px 0;
+}
+.words__button p {
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0 90px 0 74px;
+  transition: all 0.3s;
+}
+.words__button p:hover {
+  animation: seasons-button 5s ease 2s infinite reverse backwards;
 }
 @keyframes seasons-button {
   0% {
@@ -396,6 +441,21 @@ button {
     align-items: center;
   }
   .seasons__text {
+    max-width: 580px;
+    font-size: 14px;
+    line-height: 157%;
+  }
+  .words {
+    padding: 51px 0 90px;
+  }
+  .words__content {
+    flex-direction: column-reverse;
+  }
+  .words__box {
+    text-align: center;
+    align-items: center;
+  }
+  .words__text {
     max-width: 580px;
     font-size: 14px;
     line-height: 157%;

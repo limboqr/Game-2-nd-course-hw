@@ -18,6 +18,7 @@
 .game {
    position: relative;
    transition: box-shadow 0.3s ease-in-out;
+   border-radius: 16px;
 
    & img {
       border-radius: 16px;

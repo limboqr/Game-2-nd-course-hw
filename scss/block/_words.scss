@@ -1,12 +1,11 @@
-// * Seasons
-.seasons {
-   padding: 233.5px 0;
+.words {
+   padding: 239px 0;
 
    &__content {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 64px 130px;
+      gap: 64px 135px;
    }
 
    &__box {
@@ -20,9 +19,10 @@
          font-size: 18px;
          font-weight: 400;
          padding: 0 90px 0 74px;
+         transition: all 0.3s;
 
          &:hover {
-            animation: seasons-button 5s ease 2s infinite normal backwards;
+            animation: seasons-button 5s ease 2s infinite reverse backwards;
 
             @keyframes seasons-button {
                0% {
