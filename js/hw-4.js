@@ -53,6 +53,6 @@ console.log(`Получилось число ${n}. Число итеграций
 
 
 // * Task 6
-for (friday = 2; friday < 29; friday += 7) {
-   console.log(`Сегодня пятница, ${friday} число.Необходимо подготовить отчёт.`)
+for (let friday = 2; friday < 29; friday += 7) {
+   console.log(`Сегодня пятница, ${friday} число. Необходимо подготовить отчёт.`)
 }
