@@ -1,5 +1,4 @@
 // * Fonts
-
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
 
 // * Basic
@@ -36,7 +35,6 @@ button {
 }
 
 .button {
-   background-color: transparent;
    border-radius: 30px;
    background: #9c0332;
    width: 234px;
@@ -44,10 +42,10 @@ button {
 
    font-weight: 400;
    line-height: normal;
-   transition: all .3s ease-in-out;
+   transition: all 0.3s ease-in-out;
 
    &:hover {
-      background: #EB443F;
+      background: #eb443f;
    }
 }
 
@@ -67,5 +65,9 @@ button {
    border-bottom-right-radius: 3px;
    border-top-left-radius: 3px;
    border-top-right-radius: 3px;
-   background: linear-gradient(180deg, #44d3ff00, #006384,#18214300);
+   background: linear-gradient(180deg, #44d3ff00, #006384, #18214300);
 }
+
+// body {
+//    padding-inline: max(50% - 600, 16px);
+// }
