@@ -425,6 +425,27 @@ button {
   }
 }
 
+.riddles {
+  background: url(../img/riddles/mause-bg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+  padding-top: 276px;
+}
+.riddles__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+  text-align: center;
+}
+.riddles__button p {
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0 90px 0 74px;
+}
+
 @media (max-width: 1024px) {
   .header {
     height: 735px;
@@ -459,6 +480,9 @@ button {
     max-width: 580px;
     font-size: 14px;
     line-height: 157%;
+  }
+  .riddles {
+    padding-top: 51px;
   }
 }
 @media (max-width: 767px) {
