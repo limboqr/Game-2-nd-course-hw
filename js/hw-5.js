@@ -8,8 +8,8 @@ function minNum(a, b) {
    }
 }
 
-a = 10
-b = 8
+let a = 10
+let b = 8
 console.log(minNum(a, b))
 
 // * Task 2
@@ -29,7 +29,7 @@ function square(a) {
    console.log(a)
 }
 
-a = Number(prompt("Введите число", 24))
+let a = Number(prompt("Введите число", 24))
 
 square(a)
 
@@ -39,7 +39,7 @@ function square(a) {
    return a
 }
 
-a = Number(prompt("Введите число", 24))
+let a = Number(prompt("Введите число", 24))
 
 console.log(square(a))
 
