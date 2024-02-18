@@ -1,3 +1,4 @@
+// * 2.5 Функции
 // * Task 8
 game1.addEventListener("click", () => {
    const userNumMounth = Number(prompt("Введите номер месяца"))
