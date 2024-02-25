@@ -17,3 +17,26 @@ game1.addEventListener("click", () => {
       console.log("Осень")
    }
 })
+
+// * 2.7 Встроенные объекты
+// * Task 11
+game2.addEventListener("click", () => {
+   let fruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин']
+
+   fruits = fruits.sort(() => Math.random() - 0.5)
+   alert(fruits.join(', '))
+
+   const userFirst = prompt('Чему равнялся первый элемент массива?')
+   const userSecond = prompt('Чему равнялся последний элемент массива?')
+
+   const result1 = userFirst && userFirst.toLowerCase() === fruits[0].toLowerCase()
+   const result2 = userSecond && userSecond.toLowerCase() === fruits.slice(-1)[0].toLowerCase()
+
+   if (result1 && result2) {
+      console.log('Поздравляем, вы победили в этой чудесной игре.\nP.S.: "Антон"')
+   } else if (result1 || result2) {
+      console.log('Вы были близки к победе!')
+   } else {
+      console.log('Молодэц баратэн, ты не лох, но лох')
+   }
+})
