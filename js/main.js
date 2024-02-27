@@ -33,10 +33,10 @@ game2.addEventListener("click", () => {
    const result2 = userSecond && userSecond.toLowerCase() === fruits.slice(-1)[0].toLowerCase()
 
    if (result1 && result2) {
-      console.log('Поздравляем, вы победили в этой чудесной игре.\nP.S.: "Антон"')
+      console.log('Поздравляем, вы победили в этой чудесной игре.')
    } else if (result1 || result2) {
       console.log('Вы были близки к победе!')
    } else {
-      console.log('Молодэц баратэн, ты не лох, но лох')
+      console.log('Молодэц баратэн, но старайся лучше')
    }
 })

@@ -6,10 +6,15 @@ console.log(str.toUpperCase())
 console.log('js'.toUpperCase())
 
 // * Task 2
-const arrayStr = ['Кошка', 'Кит', 'Комар', 'Носорог', 'Дракон']
-const str = 'ко'
+function filterStartsWith(arrayStr, string) {
+   return arrayStr.filter(str => str.toLowerCase().includes(string.toLowerCase()))
+}
 
-console.log(arrayStr.filter((item) => item.toLowerCase().includes(str.toLowerCase()))) // * Кошка, Комар, Дракон
+const arrayStr = ['Кошка', 'Кит', 'Комар', 'Носорог', 'Дракон']
+const string = 'ко'
+const filteredStrings = filterStartsWith(arrayStr, string)
+console.log(filteredStrings)
+// console.log(arrayStr.filter((item) => item.toLowerCase().includes(str.toLowerCase()))) // * Кошка, Комар, Дракон
 
 // * Task 3
 const num = 32.58884;
@@ -22,7 +27,7 @@ const roundToNearest = num => {
 
 console.log(`До меньшего целого числа: ${Math.floor(num)}`)
 console.log(`До большего целого числа: ${Math.ceil(num)}`)
-console.log(`Ближайшее целое число: ${roundToNearest(num)}`)
+console.log(`Ближайшее целое число: ${Math.round(num)}`)
 
 // * Task 4
 const numbArray = [52, 53, 49, 77, 21, 32]
@@ -40,20 +45,36 @@ console.log(randomNum())
 // * Task 6
 function getRandomArrNumbers(userNum) {
    const result = []
+   const length = Math.floor(userNum / 2)
 
-   for (let i = 0; i < userNum; i++) {
+   for (let i = 0; i < length; i++) {
       const randomIndex = Math.round(Math.random() * userNum)
       result.push(randomIndex)
-      userNum -= 1
    }
 
    return result
 }
 
-const userNum = Number(prompt('Введите число', 8))
+function promptDie(message, value) {
+   let userNum = prompt(message, value)
 
-if (isNaN(userNum)) {
-   console.log('Это не число о_О')
+   if (userNum === null || userNum.trim() === '') {
+      return 'Вы ничтажество, Сээээр'
+   }
+
+   userNum = Number(userNum)
+
+   if (isNaN(userNum)) {
+      return 'Это не число о_О'
+   }
+
+   return userNum
+}
+
+let userNum = promptDie('Введите число', 8)
+
+if (typeof userNum == "string") {
+   console.log(userNum)
 } else if (userNum <= 0) {
    console.log('0 и отрицательные числа не реботают =(')
 } else {
@@ -62,28 +83,34 @@ if (isNaN(userNum)) {
 
 // * Task 7
 function getRandomNum(minNum, maxNum) {
-   return Math.round(Math.random() * (maxNum - minNum + 1)) + minNum
+   return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum
 }
 
-const maxNum = Number(prompt('Введите число от 10 до 20', 20))
-if (isNaN(maxNum) || maxNum < 10 || maxNum > 20) {
-   console.log('Не число или неверное число из предложенного')
-} else {
-   console.log(maxNum)
-}
+function task7() {
+   const maxNum = promptDie('Введите число от 10 до 20', 20)
+   if (typeof userNum == "string") {
+      console.log('Система обиделась')
+      return console.log(userNum)
+   } else if (isNaN(maxNum) || maxNum < 10 || maxNum > 20) {
+      console.log('Система обиделась')
+      return console.log('Не число или неверное число из предложенного')
+   } else {
+      console.log(maxNum)
+   }
 
-const minNum = Number(prompt('Введите число от 0 до 5', 0))
-if (isNaN(minNum) || minNum < 0 || minNum > 5) {
-   console.log('Не число или неверное число из предложенного')
-} else {
-   console.log(minNum)
-}
+   const minNum = promptDie('Введите число от 0 до 5', 0)
+   if (typeof userNum == "string") {
+      return console.log(userNum)
+   } else if (isNaN(minNum) || minNum < 0 || minNum > 5) {
+      return console.log('Не число или неверное число из предложенного')
+   } else {
+      console.log(minNum)
+   }
 
-if (isNaN(maxNum) || isNaN(minNum)) {
-   console.log('Одно или оба из значений не число, или введено не корректное заначение')
-} else {
    console.log(`${getRandomNum(minNum, maxNum)} число в диапазоне указанных чисел`)
 }
+
+task7()
 
 // * Task 8
 console.log(new Date())
@@ -91,7 +118,7 @@ console.log(new Date())
 // * Task 9
 let currentDate = new Date()
 
-console.log(new Date(currentDate.getTime() + 73 * 24 * 60 * 60 * 1000))
+console.log(new Date(currentDate.setDate(currentDate.getDate() + 73)))
 
 // * Task 10
 function formatDate(date) {
