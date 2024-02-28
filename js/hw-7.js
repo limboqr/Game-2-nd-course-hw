@@ -7,14 +7,13 @@ console.log('js'.toUpperCase())
 
 // * Task 2
 function filterStartsWith(arrayStr, string) {
-   return arrayStr.filter(str => str.toLowerCase().includes(string.toLowerCase()))
+   return arrayStr.filter(str => str.toLowerCase().startsWith(string.toLowerCase()))
 }
 
-const arrayStr = ['Кошка', 'Кит', 'Комар', 'Носорог', 'Дракон']
+const arrayStr = ['Кошка', 'Кит', 'Комар', 'Носорог']
 const string = 'ко'
 const filteredStrings = filterStartsWith(arrayStr, string)
 console.log(filteredStrings)
-// console.log(arrayStr.filter((item) => item.toLowerCase().includes(str.toLowerCase()))) // * Кошка, Комар, Дракон
 
 // * Task 3
 const num = 32.58884;
@@ -73,7 +72,7 @@ function promptDie(message, value) {
 
 let userNum = promptDie('Введите число', 8)
 
-if (typeof userNum == "string") {
+if (typeof userNum === "string") {
    console.log(userNum)
 } else if (userNum <= 0) {
    console.log('0 и отрицательные числа не реботают =(')
@@ -88,7 +87,7 @@ function getRandomNum(minNum, maxNum) {
 
 function task7() {
    const maxNum = promptDie('Введите число от 10 до 20', 20)
-   if (typeof userNum == "string") {
+   if (typeof userNum === "string") {
       console.log('Система обиделась')
       return console.log(userNum)
    } else if (isNaN(maxNum) || maxNum < 10 || maxNum > 20) {
